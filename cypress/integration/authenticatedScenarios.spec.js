@@ -8,7 +8,7 @@ describe('Scenarios where authentication is a pre-requeriment', () => {
       tags: '@desktop-and-tablet'
     }, () => {
       cy.visit('/')
-      cy.wait(2000)
+      cy.wait('@getNotes')
 
       /* ==== Test Created with Cypress Studio ==== */
       it('Ramon Test', function () {
