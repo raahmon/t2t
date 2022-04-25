@@ -10,11 +10,6 @@ describe('Scenarios where authentication is a pre-requeriment', () => {
       cy.visit('/')
       cy.wait('@getNotes')
 
-      if (Cypress.config('viewportWidth') < Cypress.env('viewporWidthBreakpoint')) {
-        cy.get('.navbar-toggle-collapsed')
-          .should('be.visible')
-          .click()
-      }
       /* ==== Test Created with Cypress Studio ==== */
       it('Ramon Test', function () {
         /* ==== Generated with Cypress Studio ==== */
