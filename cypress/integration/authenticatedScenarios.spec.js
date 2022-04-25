@@ -4,7 +4,9 @@ describe('Scenarios where authentication is a pre-requeriment', () => {
   beforeEach(() => {
     cy.intercept('GET', '**/notes').as('getNotes')
     cy.login()
-    it('logs out', () => {
+    it('logs out', {
+      tags: '@desktop-and-tablet'
+    }, () => {
       cy.visit('/')
       cy.wait('@getNotes')
 
